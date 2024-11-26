@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}|Assignment5WebApp.csproj|c:\\users\\salil\\onedrive\\documents\\raveena\\cse445\\assignment5\\assignment5webapp\\account\\memberlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}|Assignment5WebApp.csproj|solutionrelative:account\\memberlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}|Assignment5WebApp.csproj|c:\\users\\salil\\onedrive\\documents\\raveena\\cse445\\assignment5\\assignment5webapp\\account\\app_data\\members.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}|Assignment5WebApp.csproj|solutionrelative:account\\app_data\\members.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}|Assignment5WebApp.csproj|c:\\users\\salil\\onedrive\\documents\\raveena\\cse445\\assignment5\\assignment5webapp\\account\\memberlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}|Assignment5WebApp.csproj|solutionrelative:account\\memberlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}|Assignment5WebApp.csproj|c:\\users\\salil\\onedrive\\documents\\raveena\\cse445\\assignment5\\assignment5webapp\\account\\memberregistration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}|Assignment5WebApp.csproj|solutionrelative:account\\memberregistration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MemberLogin.aspx",
+              "DocumentMoniker": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\Account\\MemberLogin.aspx",
+              "RelativeDocumentMoniker": "Account\\MemberLogin.aspx",
+              "ToolTip": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\Account\\MemberLogin.aspx",
+              "RelativeToolTip": "Account\\MemberLogin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-24T20:42:05.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MemberRegistration.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\Account\\MemberRegistration.aspx.cs",
+              "RelativeDocumentMoniker": "Account\\MemberRegistration.aspx.cs",
+              "ToolTip": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\Account\\MemberRegistration.aspx.cs",
+              "RelativeToolTip": "Account\\MemberRegistration.aspx.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwC0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T20:12:17.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemberLogin.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\Account\\MemberLogin.aspx.cs",
+              "RelativeDocumentMoniker": "Account\\MemberLogin.aspx.cs",
+              "ToolTip": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\Account\\MemberLogin.aspx.cs",
+              "RelativeToolTip": "Account\\MemberLogin.aspx.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwC4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T00:32:33.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Members.xml",
+              "DocumentMoniker": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\Account\\App_Data\\Members.xml",
+              "RelativeDocumentMoniker": "Account\\App_Data\\Members.xml",
+              "ToolTip": "C:\\Users\\salil\\OneDrive\\Documents\\Raveena\\CSE445\\Assignment5\\Assignment5WebApp\\Account\\App_Data\\Members.xml",
+              "RelativeToolTip": "Account\\App_Data\\Members.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-11-24T02:49:00.679Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

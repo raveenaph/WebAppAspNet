@@ -15,6 +15,33 @@ namespace Assignment5.Member
     {
 
         /// <summary>
+        /// ImageVerifier1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Assignment5.ImageVerifier ImageVerifier1;
+
+        /// <summary>
+        /// txtUserIp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUserIp;
+
+        /// <summary>
+        /// lblImgError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImgError;
+
+        /// <summary>
         /// lblUserName control.
         /// </summary>
         /// <remarks>

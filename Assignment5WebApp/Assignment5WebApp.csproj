@@ -112,6 +112,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <None Include="Connected Services\ImageVerifierSvc\Service.wsdl" />
+    <None Include="Connected Services\ImageVerifierSvc\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ImageVerifierSvc\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ImageVerifierSvc\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\mySvcRef\Service1.disco" />
     <None Include="Connected Services\mySvcRef\configuration91.svcinfo" />
     <None Include="Connected Services\mySvcRef\configuration.svcinfo" />
@@ -120,6 +130,13 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Account\App_Data\Members.xml" />
+    <None Include="Connected Services\ImageVerifierSvc\Service.disco" />
+    <None Include="Connected Services\ImageVerifierSvc\configuration91.svcinfo" />
+    <None Include="Connected Services\ImageVerifierSvc\configuration.svcinfo" />
+    <None Include="Connected Services\ImageVerifierSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -144,6 +161,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="GlobalTryIt.aspx" />
+    <Content Include="imageProcess.aspx" />
+    <Content Include="ImageVerifier.ascx" />
+    <Content Include="ImageVerifierTryIt.aspx" />
     <Content Include="LoginTryIt.aspx" />
     <Content Include="Account\MemberLogin.aspx" />
     <Content Include="Account\Member.aspx" />
@@ -234,6 +254,11 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\ImageVerifierSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\mySvcRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -276,6 +301,27 @@
     </Compile>
     <Compile Include="GlobalTryIt.aspx.designer.cs">
       <DependentUpon>GlobalTryIt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="imageProcess.aspx.cs">
+      <DependentUpon>imageProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="imageProcess.aspx.designer.cs">
+      <DependentUpon>imageProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageVerifier.ascx.cs">
+      <DependentUpon>ImageVerifier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageVerifier.ascx.designer.cs">
+      <DependentUpon>ImageVerifier.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageVerifierTryIt.aspx.cs">
+      <DependentUpon>ImageVerifierTryIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageVerifierTryIt.aspx.designer.cs">
+      <DependentUpon>ImageVerifierTryIt.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginTryIt.aspx.cs">
       <DependentUpon>LoginTryIt.aspx</DependentUpon>
@@ -387,6 +433,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ImageVerifierSvc\" />
     <WCFMetadataStorage Include="Connected Services\mySvcRef\" />
   </ItemGroup>
   <PropertyGroup>

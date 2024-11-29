@@ -5,18 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Assignment5
+namespace Assignment5.Account
 {
-    public partial class StaffLogin : System.Web.UI.Page
+    public partial class MemberRegistrationConfirmation : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
+        protected void btnNext_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Staff/Staff.aspx");
+            Response.Redirect("MemberLogin.aspx");
         }
     }
 }

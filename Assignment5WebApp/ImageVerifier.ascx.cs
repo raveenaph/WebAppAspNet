@@ -36,6 +36,7 @@ namespace Assignment5
         protected void btnShowImage_Click(object sender, EventArgs e)
         {
             changeImage();
+            btnShowImage.Text = "Show me another image";
         }
     }
 }

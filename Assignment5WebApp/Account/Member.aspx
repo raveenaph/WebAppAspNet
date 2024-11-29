@@ -12,10 +12,8 @@
     
     <form id ="WindServices" runat="server">
 
-        <p>The below Welcome message is a user control and is getting the username from the Session["name"] variable</p>
-
         <uc1:username ID="username1" runat="server" />
-
+        <a href="../Default.aspx">Home</a>
         <h1>Location Services Application</h1>
         <p>This is an application that provides several location based services based on your zipcode</p>
 

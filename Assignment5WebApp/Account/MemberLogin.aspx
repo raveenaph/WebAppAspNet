@@ -10,13 +10,7 @@
 </head>
 
 <body>
-    <p>
-        Currently login functionality is not fully implemented. <br /><br />
-        But you can enter any username and password which will take you to the Member page <br />
-        The username will be stored in a session, and will be displayed on the Member page <br />
-        Registration is not yet implemented <br />
-    </p>
-
+    <a href="../Default.aspx">Home</a>
     <h4>Member Login Page </h4>
     <form id="form1" runat="server">       
         <br />
@@ -35,7 +29,7 @@
     </form>
 
     <br />
-    <a href="Member/MemberRegistration.aspx">Register as a new member</a>
+    <a href="MemberRegistration.aspx">Register as a new member</a>
 
 
 

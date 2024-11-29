@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using HashFunctions;
+using System.Net;
 
 
 namespace Assignment5
@@ -20,6 +21,7 @@ namespace Assignment5
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             //Save username in a session variable
             Session["name"] = txtLogin.Text;
 
@@ -50,6 +52,16 @@ namespace Assignment5
                     if (node["pwd"].InnerText == pwdEncrypt)
                     {
                         //username and password matched
+                        //Save username in a session variable so that it can be displayed through user control
+                        Session["name"] = txtLogin.Text;
+
+                        //Save username in a cookie
+                        HttpCookie myCookies = new HttpCookie("myCookieId");
+                        myCookies["Name"] = user;
+                        myCookies.Expires = DateTime.Now.AddMinutes(30);
+                        Response.Cookies.Add(myCookies);
+
+                        //Go to main app page
                         Response.Redirect("Member.aspx");
                         return;
                     }

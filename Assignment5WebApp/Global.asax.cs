@@ -33,6 +33,7 @@ namespace Assignment5
             Application["SessionCounter"] = count;
 
             Session["name"] = "Guest";
+
         }
 
         void Session_end(object sender, EventArgs e)
@@ -43,6 +44,8 @@ namespace Assignment5
             Int32 count = (Int32)Application["SessionCounter"];
             count--;
             Application["SessionCounter"] = count;
+            Session["name"] = "Guest";
+
         }
 
     }

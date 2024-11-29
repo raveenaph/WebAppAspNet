@@ -91,7 +91,7 @@ namespace Assignment5.Member
                 myPwd.InnerText = pwdEncrypt;
 
                 myDoc.Save(filepath);
-                Response.Redirect("MemberLogin.aspx");
+                Response.Redirect("MemberRegistrationConfirmation.aspx");
             }
             else
             {

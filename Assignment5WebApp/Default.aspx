@@ -8,15 +8,14 @@
         <p>
             This is a Web application that provides various location based services, <br />
             such as getting the air quality, average wind speed, and solar intensity of a given area. <br />
-            Currently, you can click on the member and staff login to go to the respective pages <br />
-            The login and registration functionality is not coded and will be done in Assignment 6<br />
-            However, just typing any username and any password and pressing submit on either of the pages will take you to the respective parts<br />
-            In the member pages, you can try out the provided functionality of the services<br />
-            Cookie is used to store username and will be displayed on all pages<br />
-            Session state is used to save page load counts and will be shown at the bottom of every page<br />
-            Global asax will keep track of number of sessions using an event handler<br />
-            To test this functionality open the application using browser from another provider, such as Microsoft Edge<br />
-        </p>
+            <br />
+            To register as a menber, please click on "Member Self Subscribe" <br />
+            If you have already registered, you can click on Member Page which will take you to the login page <br />
+            <br />
+            If you are staff, you can click on the "Staff Login" button to enter your staff username and password <br />
+            If you have already logged in as staff, pressing the "Staff Page" will take you to the staff page <br />
+
+            </p>
     </div>
 
     <div>
@@ -27,12 +26,15 @@
         <asp:Button ID="btnMemberReg" runat="server" Text="Member Self Subscribe" OnClick="btnMemberReg_Click" />
         <br />
         <br />
-        <asp:Button ID="btnStaff" runat="server" Text="Staff Page" OnClick="btnStaff_Click" />
+        <asp:Button ID="btnStaffLogin" runat="server" Text="Staff Login" OnClick="btnStaffLogin_Click" />
+        <br />
+        <br />
+        <asp:Button ID="btnStaff" runat="server" Text="Staff Page" OnClick="btnStaff_Click"/>
 
     </div>
     <br />
     <div>
-        <p>The below session will increment if the application opened from another browser type</p>
+        <p>The below session count will increment if the application is opened from another browser type</p>
         <asp:Label ID="lblSessionCountTxt" runat="server" Text="Session Count: " style="color:Red;"></asp:Label>
         <asp:Label ID="lblSessionCount" runat="server" Text=""></asp:Label>
     </div>

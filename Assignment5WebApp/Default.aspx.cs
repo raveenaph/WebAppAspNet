@@ -18,7 +18,11 @@ namespace Assignment5
         {
             //If member has already logged in, send them to the member page
             //otherwise send them to login page
-            Response.Redirect("MemberLogin.aspx");
+            if (Session["name"].Equals("Guest"))
+                Response.Redirect("Account/MemberLogin.aspx");
+            else
+                Response.Redirect("Account/Member.aspx");
+
         }
 
         protected void btnMemberReg_Click(object sender, EventArgs e)
@@ -28,7 +32,14 @@ namespace Assignment5
 
         protected void btnStaff_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Staff/Staff.aspx");
+            Response.Redirect("Protected/Staff.aspx");
         }
+
+        protected void btnStaffLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("staffLoginPage.aspx");
+
+        }
+
     }
 }

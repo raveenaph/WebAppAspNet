@@ -18,11 +18,11 @@ namespace Assignment5
         {
             if (Session["generatedString"].Equals(txtInput.Text))
             {
-                lblError.Text = "Success!";
+                lblError.Text = "Success, you entered the correct text!";
             }
             else
             {
-                lblError.Text = "Failure!";
+                lblError.Text = "Sorry, you entered the incorrect text. Try again!";
             }
         }
 

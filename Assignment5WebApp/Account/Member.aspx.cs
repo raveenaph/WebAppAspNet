@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
 
 namespace Assignment5.Member
 {
@@ -11,6 +12,14 @@ namespace Assignment5.Member
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie myCookies = Request.Cookies["myCookieId"];
+            if ((myCookies == null) || (myCookies["Name"] == ""))
+            {
+                lblWelcomeMsg.Text = "Welcome, Guest";
+            } else
+            {
+                lblWelcomeMsg.Text = "Welcome, " + myCookies["Name"];
+            }
         }
 
         protected void ButtonGetWindSpeed_Click(object sender, EventArgs e)

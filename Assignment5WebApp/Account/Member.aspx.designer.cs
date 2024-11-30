@@ -24,13 +24,13 @@ namespace Assignment5.Member
         protected global::System.Web.UI.HtmlControls.HtmlForm WindServices;
 
         /// <summary>
-        /// username1 control.
+        /// lblWelcomeMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Assignment5.WebUserControl1 username1;
+        protected global::System.Web.UI.WebControls.Label lblWelcomeMsg;
 
         /// <summary>
         /// LabelLatWind control.

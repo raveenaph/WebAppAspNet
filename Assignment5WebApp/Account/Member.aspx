@@ -12,7 +12,9 @@
     
     <form id ="WindServices" runat="server">
 
-        <uc1:username ID="username1" runat="server" />
+        <asp:Label ID="lblWelcomeMsg" runat="server" Text="Welcome, Guest"></asp:Label>
+        <br />
+        <br />
         <a href="../Default.aspx">Home</a>
         <h1>Location Services Application</h1>
         <p>This is an application that provides several location based services based on your zipcode</p>

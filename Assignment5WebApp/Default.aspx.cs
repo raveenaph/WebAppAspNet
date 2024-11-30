@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
 
 namespace Assignment5
 {
@@ -16,13 +17,14 @@ namespace Assignment5
 
         protected void btnMember_Click(object sender, EventArgs e)
         {
-            //If member has already logged in, send them to the member page
-            //otherwise send them to login page
-            if (Session["name"].Equals("Guest"))
+            //Check whether cookie exists to show that user has logged in
+            //If he has, then go to the member page directly.
+            //Otherwise, go to the login page
+            HttpCookie myCookies = Request.Cookies["myCookieId"];
+            if ((myCookies == null) || (myCookies["Name"] == ""))
                 Response.Redirect("Account/MemberLogin.aspx");
             else
                 Response.Redirect("Account/Member.aspx");
-
         }
 
         protected void btnMemberReg_Click(object sender, EventArgs e)

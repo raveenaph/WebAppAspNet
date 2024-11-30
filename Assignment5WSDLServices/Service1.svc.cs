@@ -4,6 +4,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.Serialization;
@@ -314,6 +315,54 @@ namespace Assignment5WSDLServices
             }
 
             return latLong;
+        }
+
+        //Required Service #3
+        //return the amount of Natural Disaster type within range of (latitude, longitude).
+        public string[] NaturalHazardData(string type, string lat, string lon)
+        {
+            string[] res = new string[2];
+            try
+            {
+                //type of natural disaster
+                string naturalInput = "";
+                if (type == "Tornado")
+                {
+                    naturalInput = "nx3tvs";
+                }
+                else if (type == "Mesocyclone")
+                {
+                    naturalInput = "nx3meso";
+                }
+                else if (type == "Hail")
+                {
+                    naturalInput = "nx3hail";
+                }
+                else
+                {
+                    naturalInput = "nx3structure";
+                }
+
+                string Url = "https://www.ncdc.noaa.gov/swdiws/json/" + naturalInput + "/20060505?bbox=" + lat + "," + lon;
+                HttpWebRequest rq = (HttpWebRequest)WebRequest.Create(Url);
+                rq.Credentials = CredentialCache.DefaultCredentials;
+                HttpWebResponse response = (HttpWebResponse)rq.GetResponse();
+                Stream streamTxt = response.GetResponseStream();
+                StreamReader readStreamTxt = new StreamReader(streamTxt, Encoding.UTF8);
+                string data = readStreamTxt.ReadToEnd();
+
+                dynamic ret = JsonConvert.DeserializeObject<dynamic>(data);
+                //Console.WriteLine(data);
+                res[0] = ret.summary.count;
+                return res;
+            }
+            catch (Exception ex)
+            {
+                res[0] = "error occurs";
+                res[1] = ex.Message;
+                return res;
+            }
+
         }
 
     }

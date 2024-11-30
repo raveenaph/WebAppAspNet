@@ -26,7 +26,9 @@ namespace Assignment5WSDLServices
 
         [OperationContract]
         string getLatLng(string zipcode);
-
+        
+        [OperationContract]
+        string[] NaturalHazardData(string type, string latitude, string longitude);
     }
 
 

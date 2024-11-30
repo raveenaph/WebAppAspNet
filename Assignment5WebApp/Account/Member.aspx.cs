@@ -86,5 +86,35 @@ namespace Assignment5.Member
                 labelWS.Text = ex.Message.ToString();
             }
         }
+
+        protected void ButtonGetDisaster_Click(object sender, EventArgs e)
+        {
+            resultLbl.Visible = false;
+            mySvcRef.Service1Client myService = new mySvcRef.Service1Client();
+            try
+            {
+                string radioValue = RadioButtonListType.SelectedValue;
+                string[] result = myService.NaturalHazardData(radioValue, LatTxt.Text, LonTxt.Text);
+
+                if (result[0] != "error occurs")
+                {
+                    resultLbl.Visible = true;
+                    resultLbl.Text = "The amount of " + radioValue + " is " + result[0];
+                }
+                else
+                {
+                    resultLbl.Visible = false;
+                    resultLbl.Text = result[1];
+                }
+            }
+            catch (Exception err)
+            {
+                resultLbl.Text = err.Message.ToString();
+            }
+            finally
+            {
+                //radiotest.Text = RadioButtonList1.SelectedValue;
+            }
+        }
     }
 }

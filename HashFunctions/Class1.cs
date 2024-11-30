@@ -16,9 +16,13 @@ namespace HashFunctions
             var sha = SHA256.Create();
             var ByteArray = Encoding.UTF8.GetBytes(password);
             var hashedPassword = sha.ComputeHash(ByteArray);
-            return Convert.ToBase64String(hashedPassword);        
+            return Convert.ToBase64String(hashedPassword);
+
+            /*
+            var sha = new SHA512CryptoServiceProvider();
+            var hasedString = sha.ComputeHash(Encoding.Default.GetBytes(password + "CSE445/598"));
+            return Convert.ToBase64String(hasedString);
+            */
         }
-
-
     }
 }

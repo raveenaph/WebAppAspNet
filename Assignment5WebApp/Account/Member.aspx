@@ -41,7 +41,6 @@
             </div>
         </div>
      
-
         <div>
             <div><h4>Solar Energy Service: </h4>
                 <p>Return the annual average sunshine index of a given position (latitude, longitude). </p>
@@ -60,24 +59,47 @@
                 <asp:Label ID="LabelSolarIntensity" runat="server" Text="Average solar intensity: "></asp:Label>
                 <asp:Label ID="LabelSolarOutput" runat="server" Text="Average solar intensity"></asp:Label>
             </div>
-     </div>
+        </div>
 
 
-         <div>
-             <div><h5>5 day weather forecast: </h5>
+        <div>
+            <div><h5>5 day weather forecast: </h5>
                  A 5-day min and max temperature forecast for a given zipcode
-             </div>
+            </div>
   
-             <br />
-             <div>
-                 <asp:TextBox ID="txtZipcode" runat="server" Width="100px" placeholder="Zipcode:"></asp:TextBox>
-                 <asp:Button ID="ButtonGetForecast" runat="server" Text="Get Forecast" OnClick="ButtonGetForecast_Click" />
-             </div>
+            <br />
+            <div>
+                <asp:TextBox ID="txtZipcode" runat="server" Width="100px" placeholder="Zipcode:"></asp:TextBox>
+                <asp:Button ID="ButtonGetForecast" runat="server" Text="Get Forecast" OnClick="ButtonGetForecast_Click" />
+            </div>
                 
-              <div>
-                 <asp:Label ID ="labelWS" runat="server"></asp:Label>
-             </div>    
-         </div>
+            <div>
+                <asp:Label ID ="labelWS" runat="server"></asp:Label>
+            </div>    
+        </div>
+
+        <div>
+            <div>
+                <h4>Natural Disaster Service:</h4>
+                <p>Return the amount of a selected type of natural disaster has happenned within given (latitude, longitude)</p>
+            </div>
+
+            <asp:RadioButtonList ID="RadioButtonListType" runat="server">
+                <asp:ListItem Value="Tornado">Tornado</asp:ListItem>
+                <asp:ListItem Value="Mesocyclone">Mesocyclone</asp:ListItem>
+                <asp:ListItem Value="Hail">Hail</asp:ListItem>
+                <asp:ListItem Value="Storm">Storm</asp:ListItem>
+            </asp:RadioButtonList>
+            <asp:Label ID="LatLbl" runat="server" Text="Latitude: "></asp:Label>
+            <asp:TextBox ID="LatTxt" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="LonLbl" runat="server" Text="Longitude: "></asp:Label>
+            <asp:TextBox ID="LonTxt" runat="server"></asp:TextBox>
+            <br />
+            <asp:Button ID="ButtonGetDisaster" runat="server" Text="Get Disaster Count" OnClick="ButtonGetDisaster_Click" />
+            <br />
+            <asp:Label ID="resultLbl" runat="server" Text=""></asp:Label>
+        </div>
 
     </form>
 

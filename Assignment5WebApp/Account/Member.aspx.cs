@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net;
+using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace Assignment5.Member
 {
@@ -16,7 +18,8 @@ namespace Assignment5.Member
             if ((myCookies == null) || (myCookies["Name"] == ""))
             {
                 lblWelcomeMsg.Text = "Welcome, Guest";
-            } else
+            }
+            else
             {
                 lblWelcomeMsg.Text = "Welcome, " + myCookies["Name"];
             }
@@ -116,5 +119,67 @@ namespace Assignment5.Member
                 //radiotest.Text = RadioButtonList1.SelectedValue;
             }
         }
+
+        protected void btnCalculate_Click(object sender, EventArgs e)
+        {
+
+                lblEstimatedPrice.Text = "Calculating estimated price. Please wait...";
+
+                try
+                {
+                    // Collect input values
+                    string address = txtAddress.Text.Trim();
+                    string propertyType = rblPropertyType.SelectedValue; // Get selected property type
+                    int bedrooms = int.TryParse(txtBedrooms.Text.Trim(), out var b) ? b : 0;
+                    int bathrooms = int.TryParse(txtBathrooms.Text.Trim(), out var bath) ? bath : 0;
+                    int squareFootage = int.TryParse(txtSquareFootage.Text.Trim(), out var sqft) ? sqft : 0;
+                    int compCount = int.TryParse(txtCompCount.Text.Trim(), out var comp) ? comp : 0;
+
+                    // Validate input
+                    if (string.IsNullOrWhiteSpace(address) || bedrooms <= 0 || bathrooms <= 0 || squareFootage <= 0 || compCount <= 0)
+                    {
+                        lblEstimatedPrice.Text = "Please provide valid inputs for all fields.";
+                        return;
+                    }
+
+                    // Create a service client instance
+                    using (var client = new PropertyData.Service1Client()) // Use the generated client class
+                    {
+                        // Call the WCF service method
+                        string estimatedPrice = client.GetPropertyData(address, propertyType, bedrooms, bathrooms, squareFootage, compCount);
+
+                        //Get just price from json
+                        var jsonObject = System.Text.Json.JsonSerializer.Deserialize<JsonElement>(estimatedPrice);
+
+                        // Extract the "price" property
+                        if (jsonObject.TryGetProperty("price", out JsonElement priceElement))
+                        {
+                            int price = priceElement.GetInt32();
+                            //Console.WriteLine($"Price: {price}");
+                            // Display the estimated price
+                            lblEstimatedPrice.Text = !string.IsNullOrEmpty(estimatedPrice) ? price.ToString() : "No data found.";
+                        }
+                        else
+                        {
+                            Console.WriteLine("Price not found in the JSON.");
+                        }
+
+                        // Display the estimated price
+                        //lblEstimatedPrice.Text = !string.IsNullOrEmpty(estimatedPrice) ? price : "No data found.";
+
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle errors gracefully
+                    lblEstimatedPrice.Text = $"Error: {ex.Message}";
+                }
+
+            }   // end of rent
+
+
+        //Calculate Rent
     }
+
 }

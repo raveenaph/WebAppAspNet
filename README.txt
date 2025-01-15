@@ -1,8 +1,11 @@
-Name : Raveena Phadnis
+Group Project :
+Team Members:
+Raveena Phadnis
+Quan Nguyen
+Cathy Vo
 
-The 3 services have been deployed to http://webstrar65.fulton.asu.edu/page0/Service1.svc
-The integrated web app for Assn 5 (not the full functionality, it will be done in Assn 6) has been deployed to : http://webstrar65.fulton.asu.edu/page1/
+Web App deployed to : http://webstrar65.fulton.asu.edu/page9/ 
 
-The sln file is in Assignment5WebApp
-Application and Components Summary Table and Services Directory are word documents in Assignment 5 root folder.
+sln file is : Assignment5WebApp/Assignment5.sln
 
+To access staff page, login using username TA and password Cse445!

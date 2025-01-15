@@ -26,10 +26,10 @@
         <asp:Button ID="btnMemberReg" runat="server" Text="Member Self Subscribe" OnClick="btnMemberReg_Click" />
         <br />
         <br />
-        <asp:Button ID="btnStaffLogin" runat="server" Text="Staff Login" OnClick="btnStaffLogin_Click" />
-        <br />
-        <br />
         <asp:Button ID="btnStaff" runat="server" Text="Staff Page" OnClick="btnStaff_Click"/>
+        <br />
+        <br />
+       <!-- <asp:Button ID="btnStaffLogin" runat="server" Text="Staff Login" OnClick="btnStaff_Click"/> -->
 
     </div>
     <br />

@@ -14,7 +14,10 @@
          <br />
         <br />
         
-        <asp:Button ID="btnSubmit" runat="server" Text="submit" OnClick="btnSubmit_Click" /><br />
+        <asp:Button ID="btnSubmit" runat="server" Text="submit" OnClick="btnSubmit_Click" />
+         <br />
+         <br />
+         The page doesn&#39;t redirect to staff page after submit for some reason. <a href="Protected/Staff.aspx">Please click here to go to the staff page after submitting credentials.</a> <br />
         <asp:Label ID="Output" runat="server"></asp:Label>
         <a href="Account/MemberLogin.aspx">Click here to login as member</a>
      </div>

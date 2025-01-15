@@ -352,7 +352,7 @@ namespace Assignment5WSDLServices
                 string data = readStreamTxt.ReadToEnd();
 
                 dynamic ret = JsonConvert.DeserializeObject<dynamic>(data);
-                //Console.WriteLine(data);
+                Console.WriteLine(data);
                 res[0] = ret.summary.count;
                 return res;
             }

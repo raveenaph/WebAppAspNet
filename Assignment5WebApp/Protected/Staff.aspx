@@ -7,11 +7,15 @@
     <title>Staff Page</title>
 </head>
 <body>
+
+    <a href="../Default.aspx">Go back to Home</a>
+    <br />
+    <br />
     <form id="form1" runat="server">
         <div>
-            This is the Staff Page. The functionality will be made avaiable in Assignment 6 <br />
-            The staff will be able to see all the members registered from this page and their details<br />
-            The staff will also be able to delete any member from here <br />
+            This is the Staff Page <br />
+            This is a protected page and only staff can see this page <br />
+            Members will not be able to see this page <br />
         </div>
     </form>
 </body>

@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment5WebApp", "Assignment5WebApp.csproj", "{4DBAD03A-3BA5-4A54-9E46-EC5F67CFD270}"
 	ProjectSection(ProjectDependencies) = postProject
 		{20FDBE6D-788A-47BC-A46D-8ED04A590C48} = {20FDBE6D-788A-47BC-A46D-8ED04A590C48}
+		{952BF56B-B79A-4EA4-B911-C8062D8C4407} = {952BF56B-B79A-4EA4-B911-C8062D8C4407}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashFunctions", "..\HashFunctions\HashFunctions.csproj", "{704ABB3C-8676-4A5D-BD32-99BEB6DA7C30}"

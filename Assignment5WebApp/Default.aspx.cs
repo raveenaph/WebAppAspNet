@@ -37,11 +37,13 @@ namespace Assignment5
             Response.Redirect("Protected/Staff.aspx");
         }
 
+        /*
         protected void btnStaffLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("staffLoginPage.aspx");
 
         }
+        */
 
     }
 }

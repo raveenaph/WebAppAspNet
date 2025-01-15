@@ -12,6 +12,10 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using static System.Net.WebRequestMethods;
+using System.Threading.Tasks;
+//
+using RestSharp;
+using System.Net.Http;
 
 namespace Assignment5RESTServices
 {
@@ -211,6 +215,43 @@ namespace Assignment5RESTServices
 
             return airQuality;
 
+        }
+
+        //Property Service - Cathy 
+        public async Task<string> GetPropertyDataAsync(string address, string propertyType, int bedrooms, int bathrooms, int squareFootage, int compCount)
+        {
+            try
+            {
+                // Construct the API URL
+                string encodedAddress = Uri.EscapeDataString(address);
+                string apiUrl = $"https://api.rentcast.io/v1/avm/value?address={encodedAddress}&propertyType={Uri.EscapeDataString(propertyType)}";
+
+                // Initialize RestClient with the API URL
+                var options = new RestClientOptions(apiUrl);
+                var client = new RestClient(options);
+
+                // Create a RestRequest and add headers
+                var request = new RestRequest();
+                request.AddHeader("accept", "application/json");
+                request.AddHeader("X-Api-Key", "a7d92e93ede845db8de42a17a339f744"); // Replace with your API key
+
+                // Execute the API call
+                var response = await client.GetAsync(request);
+
+                // Check if the response is null or empty
+                if (response == null || string.IsNullOrEmpty(response.Content))
+                {
+                    return "No data received from the RentCast API.";
+                }
+
+                // Return the response content
+                return response.Content;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions and return the error message
+                return $"Error: {ex.Message}";
+            }
         }
 
     }

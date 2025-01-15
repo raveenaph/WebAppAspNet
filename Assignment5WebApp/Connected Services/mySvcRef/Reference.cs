@@ -38,6 +38,12 @@ namespace Assignment5.mySvcRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getLatLng", ReplyAction="http://tempuri.org/IService1/getLatLngResponse")]
         System.Threading.Tasks.Task<string> getLatLngAsync(string zipcode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NaturalHazardData", ReplyAction="http://tempuri.org/IService1/NaturalHazardDataResponse")]
+        string[] NaturalHazardData(string type, string latitude, string longitude);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NaturalHazardData", ReplyAction="http://tempuri.org/IService1/NaturalHazardDataResponse")]
+        System.Threading.Tasks.Task<string[]> NaturalHazardDataAsync(string type, string latitude, string longitude);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +103,14 @@ namespace Assignment5.mySvcRef {
         
         public System.Threading.Tasks.Task<string> getLatLngAsync(string zipcode) {
             return base.Channel.getLatLngAsync(zipcode);
+        }
+        
+        public string[] NaturalHazardData(string type, string latitude, string longitude) {
+            return base.Channel.NaturalHazardData(type, latitude, longitude);
+        }
+        
+        public System.Threading.Tasks.Task<string[]> NaturalHazardDataAsync(string type, string latitude, string longitude) {
+            return base.Channel.NaturalHazardDataAsync(type, latitude, longitude);
         }
     }
 }
